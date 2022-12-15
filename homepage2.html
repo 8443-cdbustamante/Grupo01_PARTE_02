@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-12 col-md-4 col-lg-6">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
                         <pre style="font-size: 12px; background-color: lightcyan; height: 500px;">
     &lt;!doctype html&gt;
     &lt;html lang="en-US"&gt;
@@ -154,8 +154,8 @@
 
                         </pre>
                     </div>
-                    <div class="col-sm-12 col-md-4 col-lg-6">
-                          <iframe src="ejem1.html" height="500px"></iframe>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                          <iframe src="ejem1.html" height="500px" width="100%"></iframe>
                     </div>
                     
                 </div>
@@ -169,27 +169,97 @@
 
                 <div class="section-title" data-aos="fade-in" data-aos-delay="100">
                     <h2>Eventos DOM</h2>
-                    <p>En HTML DOM los métodos son las acciones que puede realizar un elemento, el cuál es considerado como un objeto al manejar en Javascript. Además dicho objetos tiene propiedades, valores a modificar propio del objeto.</p>
+                    <p>Un evento se refiere a la acción programada en Javascript que espera la interacción del usuario para poderse ejecutar. En el ejemplo podemos observar que suscede cuando se hace clic sobre el texto. Además podemos utilizar los eventos en los casos expuestos abajo.</p>
+                    <br>
+                    <div style="width: 40%; margin:auto;">
+                        <ul>
+                            <li>Cuando carga una página web</li>
+                            <li>Cuando se carga una imagen</li>
+                            <li>Cuando se pulsa una tecla</li>
+                            <li>Cuando se hace clic en un elemento</li>
+                            <li>Al enviar un formulario</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4 class="title">Método getElementByID</h4>
-                            <p class="description">Nos permite acceder a un elemento HTML usando su id definido</p>
-                        </div>
-                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <pre style="font-size: 12px; background-color: lightgreen; height: 500px;">
+   &lt;!doctype html&gt;
+    &lt;html lang="en"&gt;
+    
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;auxclick demo&lt;/title&gt;
+    &lt;style&gt;
+    html {
+    height: 100%;
+    overflow: hidden;
+    }
+    
+    body {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    }
+    
+    button {
+    border: 0;
+    background-color: white;
+    font-size: 10vw;
+    display: block;
+    width: 100%;
+    height: 100%;
+    }
+    
+    button {
+    letter-spacing: 1rem;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    
+    &lt;button&gt;Click me!&lt;/button&gt;
+    
+    
+    &lt;script&gt;
+    
+    const button = document.querySelector('button');
+    const html = document.querySelector('html');
+    
+    function random(number) {
+    return Math.floor(Math.random() * number);
+    }
+    
+    button.onclick = () =&gt; {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    button.style.backgroundColor = rndCol;
+    };
+    
+    button.onauxclick = (e) =&gt; {
+    e.preventDefault();
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    button.style.color = rndCol;
+    }
+    
+    &lt;/script&gt;
+    
+    
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
 
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4 class="title">Propiedad innerHTML</h4>
-                            <p class="description">Permite obtener o reemplazar el contenido de un elemento HTML</p>
-                        </div>
+                        </pre>
                     </div>
-
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                          <iframe src="ejem2.html" height="500px" width="100%"></iframe>
+                    </div>
+                    
                 </div>
+            </div>
 
             </div>
         </section>
@@ -254,7 +324,7 @@
 
                 <div class="section-title" data-aos="fade-in" data-aos-delay="100">
                     <h2>Nodes</h2>
-                    <p>Para la identificación de los diferentes elementos que se encuentran dentro de un documento HTML se utiliza los id, nombre de la etiqueta, nombre de la clase, selectores CSS y colecciones de objetos HTML.</p>
+                    <p>Se denomina a los nodos a los elements que se pueden añadir y eliminar dentro de un documento HTML</p>
                 </div>
                 <br>
                 <div class="row">
