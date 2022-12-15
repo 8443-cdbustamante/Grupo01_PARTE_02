@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Trabajo Grupal - Parte II</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!-- =======================================================
+  * Template Name: Squadfree - v4.9.1
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+ 
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-transparent">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+                <h1 class="text-light"><a href="index.html"><span>GRUPO 1</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#intro">Animaciones DOM</a></li>
+                    <li><a class="nav-link scrollto" href="#metodo">Eventos DOM</a></li>
+                    <li><a class="nav-link scrollto" href="#component">Event Listener</a></li>
+                    <li><a class="nav-link scrollto" href="#element">Nodes</a></li>
+                    <li><a class="nav-link scrollto" href="#colecciones">Colecciones HTML DOM</a></li>
+                    <li><a class="nav-link scrollto" href="#css">Listas HTML DOM</a></li>
+                    <li><a class="nav-link scrollto" href="#forms">Navegación HTML DOM</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1>JS HTML DOM AVANZADO</h1>
+            <h2>Conociendo los principios avanzados</h2>
+            <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+        </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="intro" class="about" data-aos="fade-up">
+            <div class="container">
+                <div class="content section-title">
+                    <h2>Animaciones DOM</h2>
+                    <p>
+                        En HTML se pueden incorporar animaciones usando en conjunto CSS y Javascript.
+                        Hay que recordar utilizar un elemento DIV como contenedor, fijando la posición en relativa.La animación irá en un elemento DIV de animación, fijado en posición absoluta.
+                        En Javascript se coloca la programación de la animación, que en su norma general utilizan temporizadores para los cambios graduales de los elementos a animar.
+                    </p>    
+                    <br>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-6">
+                        <pre style="font-size: 12px; background-color: lightcyan; height: 500px;">
+    &lt;!doctype html&gt;
+    &lt;html lang="en-US"&gt;
+    
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Web Animations API implicit keyframes&lt;/title&gt;
+    &lt;style&gt;
+    html {
+    height: 100%;
+    }
+    
+    body {
+    margin: 0;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    div {
+    width: 150px;
+    height: 100px;
+    background-color: red;
+    border: 10px solid black;
+    border-radius: 10px;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    &lt;div&gt;
+    
+    &lt;/div&gt;
+    
+    &lt;script&gt;
+    const divElem = document.querySelector('div');
+    
+    let rotate360 = [
+    { transform: 'rotate(360deg)' }
+    ];
+    
+    let slowInfinite = {
+    duration: 5000,
+    iterations: Infinity
+    }
+    
+    divElem.animate( rotate360, slowInfinite );
+    
+    &lt;/script&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;
+
+
+                        </pre>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-6">
+                          <iframe src="ejem1.html" height="500px"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="metodo" class="services">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                    <h2>Eventos DOM</h2>
+                    <p>En HTML DOM los métodos son las acciones que puede realizar un elemento, el cuál es considerado como un objeto al manejar en Javascript. Además dicho objetos tiene propiedades, valores a modificar propio del objeto.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4 class="title">Método getElementByID</h4>
+                            <p class="description">Nos permite acceder a un elemento HTML usando su id definido</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4 class="title">Propiedad innerHTML</h4>
+                            <p class="description">Permite obtener o reemplazar el contenido de un elemento HTML</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Services Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="component" class="testimonials section-bg">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                    <h2>Event Listener</h2>
+                    <p>Dentro de los documentos HTML, para acceder a un elemento hay que recordar acceder primero al objeto para trabajar en el contenido de los elementos </p>
+                </div>
+
+                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i> Encontrar elementos HTML
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="assets/img/con1.jpeg" class="testimonial-img" alt="">
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i> Cambiar elementos HTML.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="assets/img/con2.jpeg" class="testimonial-img" alt="">
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i> Añadir y Eliminar elementos HTML
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                                <img src="assets/img/con3.jpeg" class="testimonial-img" alt="">
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Testimonials Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="element" class="team">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                    <h2>Nodes</h2>
+                    <p>Para la identificación de los diferentes elementos que se encuentran dentro de un documento HTML se utiliza los id, nombre de la etiqueta, nombre de la clase, selectores CSS y colecciones de objetos HTML.</p>
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="member" data-aos="fade-up">
+                            <div class="pic"><img src="assets/img/element1.jpeg" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Ejemplo modificado</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Team Section -->
+
+
+        <!-- ======= About Section ======= -->
+        <section id="colecciones" class="about">
+            <div class="container">
+
+                <div class="row no-gutters">
+                    <div class="content col-xl-12 d-flex align-items-stretch" data-aos="fade-up">
+                        <div class="content">
+                            <h3>Colecciones HTML DOM</h3>
+                            <p>
+                                Las colecciones HTML DOM son grupos de elementos HTML que se pueden seleccionar y manipular de diferentes maneras en una página web. Por ejemplo, puedes usar una colección para seleccionar todos los elementos de una determinada etiqueta (como todos los
+                                elementos `
+                                < p>` en una página) o todos los elementos con un determinado atributo (como todos los elementos con un atributo class="foo"). <br> <br> Las colecciones HTML DOM son una parte importante de la programación web, ya que te permiten
+                                    trabajar con conjuntos de elementos en lugar de tener que seleccionar y manipular cada elemento individualmente. Esto te permite hacer cosas como cambiar el estilo de todos los elementos `
+                                    < p>` de una página con una sola línea de código, en lugar de tener que escribir código individualmente para cada elemento `
+                                        < p>`. <br> <br>Hay varias colecciones HTML DOM disponibles, dependiendo del tipo de elementos que desees seleccionar y manipular. Algunas de las más comunes incluyen: <br> <br> document.images: una colección de todas
+                                            las imágenes en una página web. <br> document.links: una colección de todos los enlaces en una página web. <br>document.forms: una colección de todos los formularios en una página web. <br>document.getElementsByTagName():
+                                            una colección de todos los elementos HTML con una determinada etiqueta (como todos los elementos `
+                                            < p>`).<br>document.getElementsByClassName(): una colección de todos los elementos HTML con una determinada clase (como todos los elementos con un atributo class="foo"). <br><br>Para usar una colección HTML DOM,
+                                                primero debes seleccionarla y luego puedes trabajar con sus elementos de diferentes maneras. Por ejemplo, puedes recorrer una colección con un bucle `for` y luego modificar cada elemento de la colección
+                                                individualmente. También puedes usar métodos como `add()` y `remove()` para agregar o eliminar elementos de la colección.<br> <br> En resumen, las colecciones HTML DOM son una herramienta muy útil para seleccionar
+                                                y manipular grupos de elementos en una página web de manera eficiente y sencilla.
+                            </p>
+
+                            <br>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <a href="colecciones.html">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">VAMOS A APRENDER</button>
+
+                </a>
+
+            </div>
+        </section>
+        <!-- End About Section -->
+
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="css" class="testimonials section-bg">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                    <h2>Listas HTML DOM</h2>
+                    <p>Las listas en HTML se crean con la etiqueta `
+                        < ul>` (para una lista no ordenada) o `
+                            < ol>` (para una lista ordenada). Dentro de estas etiquetas se pueden añadir elementos de la lista con la etiqueta `
+                                < li>`. <br> <br> Por ejemplo, para crear una lista de compras podrías usar el siguiente código: <br> <br>
+                                    <ul> <br>
+                                        < li>Leche
+                                            </li> <br>
+                                            < li>Huevos
+                                                </li> <br>
+                                                < li>Pan
+                                                    </li> <br>
+                                                    < li>Agua
+                                                        </li><br>
+                                                        </ul> <br> <br>Esto crearía una lista que se vería así: Leche Huevos Pan Agua Las listas en HTML pertenecen al DOM (Document Object Model), que es la estructura en la que se representa un documento HTML.
+                                                        El DOM permite manipular los elementos de una página web y es utilizado por los lenguajes de programación de la web, como JavaScript.</p>
+                    <br>
+
+                </div>
+                <a href="listas.html">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">VAMOS A APRENDER</button>
+
+                </a>
+
+            </div>
+        </section>
+        <!-- End Testimonials Section -->
+
+        <!-- ======= Cta Section ======= -->
+        <section id="forms" class="cta">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="text-center">
+                    <h3>Navegación HTML DOM</h3><br> <br>
+                    <p>El DOM (Modelo de Objeto de Documento) es una interface de programación que permite a los desarrolladores interactuar con un documento HTML o XML. Con el DOM, puedes modificar el contenido y el estilo de una página web dinámicamente,
+                        sin tener que recargar la página. <br> <br>La navegación del DOM se refiere a la forma en que se pueden acceder y manipular los elementos de un documento HTML a través de la interfaz del DOM. Por ejemplo, puedes usar el DOM para
+                        buscar un elemento en particular en una página web y luego cambiar su contenido o estilo.<br> <br> Para realizar una navegación del DOM en HTML, puedes usar varios métodos y propiedades del DOM, como getElementById() y querySelector().
+                        <br> <br>Por ejemplo, supongamos que queremos cambiar el contenido de un elemento de tipo "p" en una página HTML. <br> <br> Primero, podemos utilizar un método como "getElementById" para acceder al elemento que queremos modificar,
+                        y luego utilizar la propiedad "innerHTML" para cambiar su contenido.<br> <br> La navegación de tipo DOM es una herramienta importante para los desarrolladores web, ya que les permite crear páginas dinámicas y adaptables a las necesidades
+                        de sus usuarios.
+                    </p>
+                    <br>
+
+                </div>
+                <a href="navigation.html">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">VAMOS A APRENDER</button>
+
+                </a>
+
+            </div>
+        </section>
+        <!-- End Cta Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3>GRUPO 1</h3>
+                            <p class="pb-3"><em>Aplicación de Tecnologías Web</em></p>
+                            <p>
+                                8/12/2022 <br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Grupo 1</span></strong>. Derechos Reservados
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- SCROOLL REVEAL SCRIPT -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html> 
